@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>Ajouter une Personne</title>
+
+<!-- Importation de Bootstrap et de la feuille de style -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+	<!-- balise de mise en page de Bootstrap -->
+	<div class="container">
+		<!-- zone d'entête (Bootstrap) -->
+		<header class="row">
+			<h1>Ajout d'une personne dans la base de donnée</h1>
+		</header>
+	
+		<!-- Appel de la servlet LoginSevlet -->
+		<form action="LoginServlet" method="post">
+			<!-- zone ligne (Bootstrap) -->
+			<div class="row">
+				<!-- Menu de navigation (Bootstrap) -->
+				<nav class="col-lg-2">
+				<!-- zone pour chaque lien du menu -->
+					<div class="row">
+						<a href="index.html">Retour à l'Acceuil</a><br />
+					</div>
+					<div class="row">
+						<a href="FormulairePerson.html" />Ajouter une personne</a><br />
+					</div>
+					<div class="row">
+						<a href="FormulaireVille.html" />Visualiser une ville</a>
+					</div>
+				</nav>
+				
+				<!-- zone principal sur la meme ligne que le menu -->
+				<section class="col-lg-10">
+				<!-- zone pour chaque paramètre à entrer pour créer une nouvelle persone dans la base de donnée -->
+					<div class="row">
+						<div class="col-lg-2">
+							<p>Nom :</p>
+						</div>
+						<div class="col-lg-8">
+							<input type="text" name="lastName" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-2">
+							<p>Prénom :</p>
+						</div>
+						<div class="col-lg-8">
+							<input type="text" name="firstName" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-2">
+							<p>Ville :</p>
+						</div>
+						<div class="col-lg-8">
+							
+							<!-- menu déroulant de selection de la ville -->
+							<select name="city">
+								<option value="1">Longbourn</option>
+								<option value="2">Port Royal</option>
+								<option value="3">Yonville</option>
+								<option value="4">Buckshaw</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-lg-2">
+							<p>adresse email :</p>
+						</div>
+						<div class="col-lg-8">
+							<input type="email" name="emails" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-2">
+							<p>téléphone :</p>
+						</div>
+						<div class="col-lg-8">
+							<input type="tel" name="phone" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-2">
+							<p>date de naissance :</p>
+						</div>
+						<div class="col-lg-8">
+							<p>
+								<input type="text" name="jour" size=2 />(jour)<input type="text"
+									name="mois" size=2 />(mois)<input type="text" name="an" size=4 />(année)
+						</div>
+						</p>
+					</div>
+					<!-- nouvelle ligne pour le bouton d'envoi des données -->
+					<div class="row">
+						<input type="submit" value="Créer" />
+					</div>
+				</section>
+			</div>
+		</form>
+	</div>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

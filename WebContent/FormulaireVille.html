@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>Visualiser une ville</title>
+
+	<!--Importation de Bootstrap et de la feuille de style -->
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+  </head>
+  
+  <body>
+  	<!-- Appel de la Servlet "VilleServlet" -->
+	<form action="VilleServlet" method="post">
+	
+		<!-- Balise de mise en forme de ma page Bootstrap -->
+		<div class="container">
+		
+			<!-- Entête Bootstrap -->
+			<header class="row">
+				<h1>choisissez une ville :</h1>
+			</header>
+			
+			<!-- definition d'une ligne à mettre en forme (Bootstrap) -->
+			<div class="row">
+			
+				<!-- Menu de navigation (Bootstrap) -->
+				<nav class="col-lg-2">
+				
+					<!-- Céllules pour chaque lien du menu -->
+					<div class="row">
+						<a href="index.html">Retour à l'Acceuil</a><br/>
+					</div>
+					<div class="row">
+						<a href="FormulairePerson.html" />Ajouter une personne</a><br/>
+					</div>
+					<div class="row">
+						<a href="FormulaireVille.html"/>Visualiser une ville</a>
+					</div>
+				</nav>
+				
+				<!-- Bloque principal (même ligne que le menu) -->
+				<section class="col-lg-10">
+					<p>Sélectionné une Ville</p><br/>
+					
+					<!-- Menu déroulant pour le choix de la ville à afficher -->
+					<select name="city">
+						  <option value="1">Longbourn</option>
+						  <option value="2">Port Royal</option>
+						  <option value="3">Yonville</option>
+						  <option value="4">Buckshaw</option>
+					</select>
+					<br /> <input type="submit" value="Visualiser" />
+				</section>
+			
+			</div>
+		</div>
+	</form>
+	
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
